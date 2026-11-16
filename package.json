@@ -7,10 +7,12 @@
   "scripts": {
     "start": "node server.js",
     "dev": "node --watch server.js",
-    "test": "cross-env NODE_ENV=test jest --runInBand",
-    "test:coverage": "cross-env NODE_ENV=test jest --coverage --runInBand"
+    "test": "cross-env NODE_OPTIONS=--experimental-vm-modules NODE_ENV=test jest --runInBand",
+    "test:coverage": "cross-env NODE_OPTIONS=--experimental-vm-modules NODE_ENV=test jest --coverage --runInBand"
   },
-  "engines": { "node": ">=20" },
+  "engines": {
+    "node": ">=20"
+  },
   "dependencies": {
     "bcryptjs": "^3.0.2",
     "cors": "^2.8.5",
