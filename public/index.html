@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="es">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SGP | Productos</title><link rel="stylesheet" href="/styles.css"></head>
+<body class="dashboard">
+<header class="topbar"><a class="brand" href="/">SGP <span>Inventario</span></a>
+<div><span id="welcome"></span><button id="logout" class="secondary">Cerrar sesión</button></div></header>
+<main class="content">
+  <section class="heading"><div><p class="eyebrow">PANEL DE CONTROL</p><h1>Productos</h1><p class="muted">Administra tu catálogo e inventario.</p></div>
+  <div class="stat"><span>PRODUCTOS REGISTRADOS</span><strong id="count">0</strong></div></section>
+  <section class="panel">
+    <h2 id="form-title">Agregar producto</h2>
+    <form id="product-form" class="product-form">
+      <input type="hidden" id="product-id">
+      <div><label for="name">Nombre</label><input id="name" name="name" required minlength="2" maxlength="120"></div>
+      <div><label for="price">Precio</label><input id="price" name="price" type="number" min="0" step="0.01" required></div>
+      <div><label for="stock">Existencias</label><input id="stock" name="stock" type="number" min="0" step="1" value="0" required></div>
+      <div class="wide"><label for="description">Descripción</label><input id="description" name="description" maxlength="1000"></div>
+      <div class="actions"><button type="submit" id="save">Guardar producto</button><button type="button" id="cancel" class="secondary hidden">Cancelar</button></div>
+    </form>
+  </section>
+  <p id="message" class="message" role="status"></p>
+  <section class="panel"><div class="table-head"><h2>Catálogo</h2><button id="refresh" class="secondary">Actualizar</button></div>
+  <div class="table-wrap"><table><thead><tr><th>Producto</th><th>Precio</th><th>Stock</th><th>Descripción</th><th>Acciones</th></tr></thead><tbody id="products"></tbody></table></div>
+  <p id="empty" class="muted">Todavía no hay productos registrados.</p></section>
+</main><script src="/app.js"></script></body></html>

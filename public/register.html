@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="es">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SGP | Crear cuenta</title><link rel="stylesheet" href="/styles.css"></head>
+<body class="auth-page">
+<main class="auth-card">
+  <div class="brand-mark">SG</div><p class="eyebrow">SISTEMA DE GESTIÓN</p>
+  <h1>Crea tu cuenta</h1><p class="muted">Regístrate para comenzar a administrar productos.</p>
+  <form id="register-form">
+    <label for="name">Nombre</label><input id="name" name="name" required minlength="2" autocomplete="name">
+    <label for="email">Correo electrónico</label><input id="email" name="email" type="email" required autocomplete="email">
+    <label for="password">Contraseña (mínimo 8 caracteres)</label><input id="password" name="password" type="password" required minlength="8" autocomplete="new-password">
+    <button type="submit">Crear cuenta <span>→</span></button>
+  </form>
+  <p id="message" class="message" role="status"></p>
+  <p class="switch">¿Ya tienes cuenta? <a href="/login.html">Inicia sesión</a></p>
+</main><script src="/auth.js"></script></body></html>
